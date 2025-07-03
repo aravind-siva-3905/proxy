@@ -2,7 +2,7 @@ const express = require('express');
 const { createProxyMiddleware } = require('http-proxy-middleware');
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3001;
 const TARGET = 'https://loki-892158326.zohocatalyst.com'; // 🔁 Change this to your target URL
 
 // Log all incoming requests
